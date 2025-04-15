@@ -1,5 +1,5 @@
 import pandas as pd
-from typing import Dict, Optional
+from typing import Dict
 
 class MultiDatasetReader:
     def __init__(self):
