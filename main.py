@@ -70,23 +70,3 @@ reader.register_dataset(
     }
 )
 
-employment_data = reader.get_filtered_for_plot("employment_rate")
-salary_data = reader.get_filtered_for_plot("median_salary")
-
-plt.figure(figsize=(10, 5))
-plt.plot(employment_data["Year"], employment_data["Rate"], label="Employment Rate")
-plt.title("Employment Rate Over Time")
-plt.xlabel("Year")
-plt.ylabel("Employment Rate")
-plt.legend()
-plt.grid(True)
-plt.show()
-
-plt.figure(figsize=(10, 5))
-plt.plot(salary_data["Year"], salary_data["Salary"], label="Median Salary", color="orange")
-plt.title("Median Salary Over Time")
-plt.xlabel("Year")
-plt.ylabel("Median Salary")
-plt.legend()
-plt.grid(True)
-plt.show()
