@@ -1,5 +1,5 @@
 import pandas as pd
-from Reader.MultiDatasetReader import MultiDatasetReader
+from reader.MultiDatasetReader import MultiDatasetReader
 import matplotlib.pyplot as plt
 
 reader = MultiDatasetReader()
