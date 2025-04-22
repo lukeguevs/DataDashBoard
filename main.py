@@ -37,6 +37,23 @@ reader.register_dataset(
 )
 
 reader.register_dataset(
+    name="median_salary_per_person",
+    file_path="data/MedianSalary.csv",
+    column_map={
+        "year": "StichtagDatJahr",
+        "age_group_sort_order": "QuarSort",
+        "age_group_description": "QuarCd",
+        "gender_description": "QuarLang",
+        "tax_sort": "SteuerTarifSort",
+        "tax_code": "SteuerTarifCd",
+        "tax_description": "SteuerTarifLang",
+        "median_salary": "SteuerEinkommen_p50",
+        "lower_quartile_salary": "SteuerEinkommen_p25",
+        "upper_quartile_salary": "SteuerEinkommen_p75"
+    }
+)
+
+reader.register_dataset(
     name="median_wealth_people",
     file_path="data/MedianWealthPeople.csv",
     column_map={
