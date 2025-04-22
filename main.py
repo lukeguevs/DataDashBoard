@@ -70,12 +70,6 @@ reader.register_dataset(
     }
 )
 
-employment_rate = pd.read_csv("data/EmployementRate.csv")
-print("EmploymentRate.csv columns:", employment_rate.columns)
-
-median_salary = pd.read_csv("data/MedianSalary.csv")
-print("MedianSalary.csv columns:", median_salary.columns)
-
 employment_data = reader.get_filtered_for_plot("employment_rate")
 salary_data = reader.get_filtered_for_plot("median_salary")
 
@@ -88,7 +82,6 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# Plot Median Salary
 plt.figure(figsize=(10, 5))
 plt.plot(salary_data["Year"], salary_data["Salary"], label="Median Salary", color="orange")
 plt.title("Median Salary Over Time")
